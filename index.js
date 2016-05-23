@@ -5,11 +5,11 @@
     ? module.exports = factory()
     : typeof define === 'function' && define.amd
       ? define(factory)
-      : global.detectWebgl = factory();
+      : global.webglMetrics = factory();
 }(this, function() {
   'use strict';
 
-  function detectWebgl() {
+  function webglMetrics() {
     if (!window.WebGLRenderingContext) {
       return {
         status: false,
@@ -51,5 +51,5 @@
       };
     }
   }
-  return detectWebgl;
+  return webglMetrics;
 }));
