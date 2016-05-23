@@ -31,17 +31,17 @@
           status: true
         };
       }
-      var failIfCaveatError = lastError;
+      var noCaveatError = lastError;
       if (canvas.getContext('experimental-webgl')) {
         return {
           status: true,
-          hasPerformanceCaveat: true,
-          failIfCaveatError: failIfCaveatError
+          hasCaveat: true,
+          noCaveatError: noCaveatError
         };
       }
       return {
         status: false,
-        failIfCaveatError: failIfCaveatError,
+        noCaveatError: noCaveatError,
         hasCaveatError: lastError
       };
     } catch (e) {

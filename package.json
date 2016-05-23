@@ -1,6 +1,6 @@
 {
   "name": "webgl-metrics",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "WebGL Support Detection",
   "main": "index.js",
   "scripts": {
